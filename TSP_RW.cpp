@@ -103,20 +103,6 @@ int FindCost(std::vector<std::vector<int>> map, int curr_city, int travel_to)
         }
     }
 }
-PathInfo FindBestAnswer(std::vector<PathInfo> answers) // won't use this one
-{
-    PathInfo best_answer;
-
-    best_answer = answers[0];
-    for (int i = 0; i < answers.size(); i++)
-    {
-        if (best_answer.cost < answers[i].cost)
-        {
-            best_answer = answers[i];
-        }
-    }
-        return best_answer;
-}
 void PrintAnswer(PathInfo answer)
 {
     std::cout << "\n";
